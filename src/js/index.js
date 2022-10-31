@@ -2,11 +2,11 @@ import { preloadImages } from './utils';
 import { Slideshow } from './slideshow';
 import gsap from 'gsap';
 
-// body element
+// body
 const bodyEl = document.body;
 // body color
 const bodyColor = getComputedStyle(bodyEl).getPropertyValue('--color-bg');
-// Three Slideshow instances: main, and two for the navigation items
+// 3 Sliders 
 const slideshowMain = new Slideshow(document.querySelector('.slideshow > div.slides'));
 const slideshowNavNext = new Slideshow(document.querySelector('.slideshow nav.nav--next .slides'), {duration: 1, filtersAnimation: false});
 const slideshowNavPrev = new Slideshow(document.querySelector('.slideshow nav.nav--prev .slides'), {duration: 1, filtersAnimation: false});
@@ -37,7 +37,7 @@ const animateBodyBGColor = () => {
 
 // Set the current slide
 slideshowMain.setInitialSlide();
-// Set up the current slide values for the navigation elements, which are based on the slideshowMain's current value
+// Set up the current slide values for the navigation elements, based on the slideshowMain's current value
 slideshowNavPrev.setInitialSlide(slideshowMain.current ? slideshowMain.current - 1 : slideshowMain.slidesTotal - 1);
 slideshowNavNext.setInitialSlide(slideshowMain.current < slideshowMain.slidesTotal - 1 ? slideshowMain.current + 1 : 0);
 

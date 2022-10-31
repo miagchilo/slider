@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 
 export class Slideshow {
     
-    // DOM elements
+
     DOM = {
         // Main element .slides
         el: null,
@@ -131,12 +131,12 @@ export class Slideshow {
         })
         .addLabel('start', 0)
         
-        // Upcoming Slide gets shown behind the current Slide animates out
+        // Upcoming Slide gets shown behind the current 
         .set(this.upcomingSlide.DOM.outer, {
             opacity: 1
         }, 'start')
         
-        // outer/inner opposite translations (Reveal effect)
+        //  (Reveal effect)
         .to(this.currentSlide.DOM.outer, {
             x: this.direction === 'next' ? '-101%' : '101%',
             onComplete: () => gsap.set(this.currentSlide.DOM.outer, {x: '0%', opacity: 0})
@@ -146,7 +146,7 @@ export class Slideshow {
             onComplete: () => gsap.set(this.currentSlide.DOM.inner, {x: '0%'})
         }, 'start')
         
-        // Filters animation
+        // filt anim
         if ( this.filtersAnimation ) {
             
             this.timeline.to(this.currentSlide.DOM.inner, {
