@@ -1,4 +1,4 @@
-##SLIDER 
+## SLIDER 
 project for hs
 ## Installation
 
@@ -23,6 +23,9 @@ npm run build
 ## Credits
 
 - Images from [Dribble](https://dribble.com/)
+
+## Preview 
+[Preview](https://slider-liart.vercel.app/) 
 
 
 
